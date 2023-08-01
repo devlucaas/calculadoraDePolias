@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora de Tamanho de Polias</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <section>
+
+        <h1>Calculadora de Polias e RPM</h1>
+        <h5>
+            Introduzir três valores para calcular o quarto valor.
+            <br>
+            ( Uma das quatro caixas deve estar em branco quando o cálculo é feito ).
+        </h5>
+
+        <form id="calcForm">
+            Diâmetro da Polia Impulsionada (mm): <input type="number" id="tamanhoPoliaImpulsionada" step="any" oninput="validarNumero(this)"><br>
+            Diâmetro da Polia do Motor (mm): <input type="number" id="tamanhoPoliaImpulsionadora" step="any" oninput="validarNumero(this)"><br>
+            Velocidade do motor (rpm): <input type="number" id="rpmImpulsionador" step="any" oninput="validarNumero(this)"><br>
+            Velocidade da Polia Impulsionada (rpm): <input type="number" id="rpmPoliaImpulsionada" step="any" oninput="validarNumero(this)"><br>
+            <button type="button" onclick="calcular()">Calcular</button>
+        </form>
+
+        <span id="resultado"></span>
+    </section>
+
+    <script src="script.js"></script>
+</body>
+</html>
